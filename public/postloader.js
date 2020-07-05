@@ -5,7 +5,7 @@ window.enqueuepro_clientside_config = {
               name: "TEST EVENT",
               actionType: "Queue",
               eventId: "275367c1-7d61-419a-a73d-1e6b5d4e72fe",
-              cookieDomain: "localhost",
+              cookieDomain: "juanito.cl",
               layoutName: null,
               culture: "",
               extendValidity: false,
@@ -13,7 +13,7 @@ window.enqueuepro_clientside_config = {
               triggers: [{
                 triggerParts: [{
                   operator: "Contains",
-                  valueToCompare: "localhost",
+                  valueToCompare: "juanito.cl",
                   valuesToCompare: null,
                   urlPart: "HostName",
                   cookieName: null,
