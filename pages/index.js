@@ -13,11 +13,21 @@ export default function Home() {
       <main>
         <Header />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          This page is behind a queue!
         </p>
       </main>
 
       <Footer />
+
+      <script type="text/javascript" src="/queueclient.js"></script>
+        <script
+        data-queueit-intercept-domain="juanito.cl"
+        data-queueit-intercept="true"
+        data-queueit-c="a9690a11-4ee6-4724-b53f-a104b8c80bb7"
+        type="text/javascript"
+        src="/queueconfigloader.js">
+        </script>
+        <script type="text/javascript" src="/postloader.js"></script>
 
       <style jsx>{`
         .container {
