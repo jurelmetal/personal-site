@@ -170,8 +170,10 @@ var EnqueuePro;
                     options.host = 'getqueued.enqueue.pro';
                 if (!options.redirector)
                     options.redirector = function (url) {
-                        window.location.href = url;
-                        document.close();
+                        if (confirm("Te redirijo?")) {
+                            window.location.href = url;
+                            document.close();
+                        }
                     };
                 if (!options.getCookies)
                     options.getCookies = function () { return document.cookie; };
@@ -238,10 +240,7 @@ var EnqueuePro;
                         (!this.layoutName ? '' : '&l=' + encodeURIComponent(this.layoutName)) +
                         (!queueStateCookie ? '' : ('&_cval=' + encodeURIComponent(queueStateCookie) + '&_cv=' + this.options.validity)) +
                         this.generateTargetUrlParams();
-                    (function() {
-                        document.location.href = queueUrl;
-                        document.close();
-                    })();
+                    this.options.redirector(queueUrl);
                 }
             };
             QueueClient.prototype.getCustomerId = function () {
